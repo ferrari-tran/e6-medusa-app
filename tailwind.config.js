@@ -1,10 +1,55 @@
+const defaultTheme = require("tailwindcss/defaultTheme");
+
 module.exports = {
   future: {},
   content: ["./src/**/*.{js,jsx,ts,tsx,vue}"],
   theme: {
+    colors: {
+      primary: "rgb(102, 102, 102)",
+      secondary: "rgb(241, 138, 0)",
+      teriary: "#fff",
+      black: "#000",
+      white: "#fff",
+      transparent: "transparent",
+      current: "currentColor",
+      ...defaultTheme.colors
+    },
+    screen: {
+      md: '750px',
+      lg: '990px',
+      xl: '1400px'
+    },
+    container: {
+      padding: {
+        DEFAULT: '10px',
+        md: '20px',
+        lg: '20px',
+        xl: '20px'
+      },
+      center: true,
+      screens: {
+        md: '100%',
+        lg: '100%',
+        xl: '1180px'
+      }
+    },
     extend: {
       fontSize: {
-        "2xs": "0.5rem",
+        "2xs": "0.5rem", // 8px
+        sm: "0.75rem", // 12px
+        base: "1rem", // 16px
+        xl: "1.25rem", // 20px
+        "2xl": "1.5rem", // 24px
+        "3xl": "2rem", // 32px
+        "4xl": "2.5rem", // 40px
+        "5xl": "3rem", // 48px
+      },
+      lineHeight: {
+        none: "0",
+        tight: "1.125", // can use for heading
+        normal: "1.375", // with base 16px is 22px
+        relaxed: "1.75", // optional
+        loose: "2", // optional
       },
       maxWidth: {
         "1/4": "25%",
