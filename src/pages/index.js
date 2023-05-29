@@ -15,52 +15,32 @@ const IndexPage = ({ data }) => {
   return (
     <div>
       <SearchEngineOptimization title="Home" />
-      <div className="bg-ui-light pb-12 lg:pb-0 w-full px-4 sm:px-6 lg:px-12">
-        <div className="flex flex-col lg:flex-row items-center max-w-screen-2xl mx-auto">
-          <StaticImage
-            src="../images/hero-merch.png"
-            alt="A black Medusa hoodie and a white Medusa coffee mug"
-            placeholder="tracedSVG"
-            className="w-full lg:w-1/2 h-auto"
-          />
-          <div>
-            <h1 className="text-4xl">CLAIM YOUR MERCH</h1>
-            <p className="mt-2 text-lg font-normal">
-              Contribute to Medusa and receive free merch
-              <br />
-              as a token of our appreciation
-            </p>
-            <button className="btn-ui mt-4 min-w-full lg:min-w-0">
-              Learn more
-            </button>
-          </div>
+      <section className="hero relative min-h-[700px]">
+        <div className="hero-background absolute top-0 left-0 w-full h-full bg-primary "></div>
+        <div className="container">
+          <h1>Heading 1</h1>
         </div>
-      </div>
-      <div className="layout-base my-12 min-h-0">
-        <Grid
-          title={"Featured"}
-          cta={{ to: "/products", text: "Browse all products" }}
-        >
-          {prods.slice(0, 4).map(p => {
-            return <ProductListItem product={p} key={p.handle} />
-          })}
-        </Grid>
-        <div className="mt-12">
-          <Grid
-            title="Shop by collection"
-            cta={{ to: "/collections", text: "Browse all collections" }}
-          >
-            {collectionPreviews.slice(0, 4).map(collection => {
-              return (
-                <CollectionPreview
-                  key={collection.id}
-                  collection={collection}
-                />
-              )
-            })}
-          </Grid>
-        </div>
-      </div>
+      </section>
+
+      <section className="features">
+        <div className="container">Features</div>
+      </section>
+
+      <section className="block-image-content">
+        <div className="container">Block image with content</div>
+      </section>
+
+      <section className="block-image">
+        <div className="container">Block three images</div>
+      </section>
+
+      <section className="testimonials">
+        <div className="container">Testimonials</div>
+      </section>
+
+      <section className="block-map">
+        <div className="container">Map</div>
+      </section>
     </div>
   )
 }
